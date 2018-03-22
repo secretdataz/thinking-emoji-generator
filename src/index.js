@@ -2,6 +2,7 @@ import { fabric } from 'fabric'
 
 const getImageButton = document.getElementById('getImage')
 const downloadImageLink = document.getElementById('download')
+const bringToFrontButton = document.getElementById('bringToFront')
 
 const canvas = new fabric.Canvas('thinkingCanvas')
 
@@ -21,6 +22,7 @@ function init () {
 
   getImageButton.addEventListener('change', addImage)
   downloadImageLink.addEventListener('click', downloadImage)
+  bringToFrontButton.addEventListener('click', bringThinkingImageToFront)
 }
 
 function addImage () {
@@ -45,6 +47,7 @@ function downloadImage () {
 }
 
 function bringThinkingImageToFront () {
+  canvas.discardActiveObject()
   thinkingImage.bringToFront()
 }
 
