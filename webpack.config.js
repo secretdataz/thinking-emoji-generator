@@ -14,6 +14,10 @@ module.exports = {
       {
         from: './src/think.svg',
         to: distPath
+      },
+      {
+        from: './src/favicon.ico',
+        to: distPath
       }
     ])
   ]

@@ -21,7 +21,7 @@ function init () {
   })
 
   getImageButton.addEventListener('change', addImage)
-  bringToFrontButton.addEventListener('click', bringToFront)
+  bringToFrontButton.addEventListener('click', bringThinkingImageToFront)
   downloadImageLink.addEventListener('click', downloadImage)
 }
 
@@ -33,6 +33,7 @@ function addImage () {
     image.scaleToWidth(canvas.getWidth())
     canvas.add(image)
     image.center()
+    bringThinkingImageToFront()
   })
 }
 
@@ -45,7 +46,7 @@ function downloadImage () {
   downloadImageLink.href = image
 }
 
-function bringToFront () {
+function bringThinkingImageToFront () {
   thinkingImage.bringToFront()
 }
 
