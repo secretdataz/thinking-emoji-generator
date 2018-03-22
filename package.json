@@ -1,0 +1,23 @@
+{
+  "name": "thinking-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "fabric": "^2.2.2",
+    "html-webpack-plugin": "^3.0.7",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "private": true,
+  "devDependencies": {
+    "webpack": "^4.2.0"
+  },
+  "scripts": {
+    "build": "webpack --silent",
+    "serve": "webpack-dev-server --open",
+    "watch": "webpack --silent --watch"
+  }
+}
