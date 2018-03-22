@@ -39,8 +39,7 @@ function addImage () {
 function generateImage () {
   document.getElementById('output').src = canvas.toDataURL({
     format: 'png',
-    multiplier: 0.5,
-    enableRetinaScaling: !1
+    multiplier: 0.5
   })
 }
 
