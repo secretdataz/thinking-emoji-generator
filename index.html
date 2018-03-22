@@ -7,17 +7,22 @@
           margin: 40px;
           font-family: Arial, Helvetica, sans-serif;
           background-color: #efefef;
+          max-width: 600px;
+          margin:0 auto;
+          text-align: center;
+          color: #111;
         }
 
-        button {
+        .btn {
           padding: 10px;
           border-radius: 5px;
-        }
-
-        .wrapper {
-          display: grid;
-          grid-template-columns: 50% 50%;
-          grid-gap: 10px;
+          text-align:center;
+          background-color: #41AF4B;
+          font-size: 14px;
+          text-decoration: none;
+          color: #fff;
+          line-height: 1.1;
+          display: inline-block;
         }
 
         .box {
@@ -29,9 +34,9 @@
 
         .canvas-wrapper {
           border: 2px solid #efefef;
-          margin: 20px 0;
           width: 256px;
           height: 256px;
+          margin: 20px auto;
         }
 
         #output {
@@ -39,26 +44,28 @@
           height: 128px;
         }
 
+        #getImage {
+          opacity: 0;
+          height: 0;
+          width: 0;
+        }
+
     </style>
   </head>
   <body>
-    <h1>🤔 Thinking Emoji Generator</h1>
-    <div class="wrapper">
-      <div class="box">
-        <h2>Add Image</h2>
-        <input type="file" id="getImage" accept=".jpg, .jpeg, .png">
+    <h1>🤔 Thinking Emoji Generator 🤔</h1>
+    <div class="box">
+      <label for="getImage" class="btn">Choose image to upload (PNG, JPG)</label>
+      <input type="file" id="getImage" accept=".jpg, .jpeg, .png">
 
-        <div class="canvas-wrapper">
-          <canvas id="thinkingCanvas"></canvas>
-        </div>
+      <div class="canvas-wrapper">
+        <canvas id="thinkingCanvas"></canvas>
+      </div>
 
-        <button id="showMeTheLols">Generate</button>
-        <button id="bringToFront">Bring Thinking hand to front</button>
-      </div>
-      <div class="box">
-          <h2>New Emoji</h2>
-          <img id="output">
-      </div>
+      <button id="bringToFront" class="btn">Bring Thinking hand to front</button>
+      <a id="download" href="#" download="thinking.png" class="btn">
+        Download
+      </a>
     </div>
     <script src="dist/main.js"></script>
   </body>

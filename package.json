@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "webpack --silent",
-    "serve": "webpack-dev-server --open",
+    "start:dev": "webpack-dev-server --open",
     "watch": "webpack --silent --watch"
   }
 }
