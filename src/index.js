@@ -14,7 +14,7 @@ function init () {
     height: 256
   })
 
-  fabric.Image.fromURL('/think.svg', function (image) {
+  fabric.Image.fromURL('/dist/think.svg', function (image) {
     thinkingImage = image
     canvas.add(thinkingImage)
     thinkingImage.center()
