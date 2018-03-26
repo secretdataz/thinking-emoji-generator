@@ -15,8 +15,8 @@
     "webpack": "^4.2.0"
   },
   "scripts": {
-    "build": "webpack --silent",
-    "start:dev": "webpack-dev-server --open",
-    "watch": "webpack --silent --watch"
+    "build": "webpack --mode production",
+    "start:dev": "webpack-dev-server --config ./webpack.config.js --open",
+    "watch": "webpack --config ./webpack.config.js --watch --progress"
   }
 }
