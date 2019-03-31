@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Thinking Emoji Generator</title>
+    <link rel="shortcut icon" type="image/png" href="dist/favicon.ico">
+    <style>
+        body {
+          margin: 40px;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #efefef;
+          max-width: 800px;
+          margin:0 auto;
+          text-align: center;
+          color: #666;
+          padding: 20px;
+        }
+
+        h1, h2 {
+          line-height: 1.1;
+          margin: 0 0 1em 0;
+        }
+
+        .btn {
+          padding: 10px;
+          border-radius: 5px;
+          text-align:center;
+          background-color: #41AF4B;
+          font-size: 14px;
+          text-decoration: none;
+          color: #fff;
+          line-height: 1.1;
+          display: inline-block;
+        }
+
+        .content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+
+        .box {
+          background-color: #fff;
+          border-radius: 5px;
+          padding: 20px;
+        }
+
+        .box--settings {
+          text-align: left;
+        }
+
+        .setting {
+          margin-bottom: 20px;
+        }
+
+        .canvas-wrapper {
+          border: 2px solid #efefef;
+          width: 256px;
+          height: 256px;
+          margin: 20px auto;
+        }
+
+        #getImage {
+          opacity: 0;
+          height: 0;
+          width: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>🤔 Thinking Emoji Generator 🤔</h1>
+    <div class="content">
+      <div class="box">
+        <label for="getImage" class="btn">Add image (PNG, JPG)</label>
+        <input type="file" id="getImage" accept=".jpg, .jpeg, .png">
+
+        <div class="canvas-wrapper">
+          <canvas id="thinkingCanvas"></canvas>
+        </div>
+
+        <a id="download" href="#" download="thinking.png" class="btn">
+          Download
+        </a>
+      </div>
+      <div class="box box--settings">
+        <div class="setting">
+          <span>Set Stroke Colour</span>
+          <input id="changeStrokeColour" type="color" value="#EB8F00">
+        </div>
+        <div class="setting">
+          <span>Set Fill Colour</span>
+          <input id="changeFillColour" type="color" value="#F6A323">
+        </div>
+        <div class="setting">
+          <button id="bringToFront" class="btn">Bring Thinking Hand to Front</button>
+        </div>
+      </div>
+    </div>
+    <script src="dist/main.js"></script>
+  </body>
+</html>
